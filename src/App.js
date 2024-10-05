@@ -19,7 +19,7 @@ function App() {
       />
       <button onClick={handleAddTask}>Dodaj zadanie</button>
       {todoList.map(elem => {
-        return <p>{elem.description}</p>
+        return <p key={elem.id}>{elem.description}</p>
       })}
     </div>
   );
