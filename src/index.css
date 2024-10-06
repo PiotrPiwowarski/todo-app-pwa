@@ -1,1 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.app {
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #6D214F;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.app-title {
+    line-height: 100px;
+    text-align: center;
+}
+
+.menu-button {
+    
+}
+
+.menu-buttons {
+    position: absolute;
+    top: 100px;
+    left: 0px;;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.menu-button {
+    position: absolute;
+    height: 50px;
+    color: white;
+}
+
+button {
+    border: none;
+    background-color: rgba(255, 255, 255);
+    font-size: 1rem;
+    transition: 0.3s color;
+    margin: 10px 20px;
+}
+
+button:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.error {
+    color: rgba(249, 3, 3, 0.812);
+}
+
+.tasksList {
+    display: flex;
+}
