@@ -64,10 +64,13 @@ button:active {
     height: 30px;
     color: white;
     background-color: rgba(0, 0, 0, 0);
+}
+
+.main-menu-button img {
     transition: filter 0.3s ease;
 }
 
 .main-menu-button:active img {
-    filter: brightness(0.85);
+    filter: brightness(0.7);
 }
 
