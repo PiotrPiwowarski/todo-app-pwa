@@ -1,23 +1,22 @@
-import AddNewTask from './AddNewTask';
 import Task from './Task';
+import TaskDetails from './TaskDetails';
 
-const TasksList = ({ tasks, setTasks, newTask, setNewTask, setError }) => {
-	let counter = 1;
+const TasksList = ({ tasks, setTasks }) => {
+	const handleClickDetails = (clickedTask) => {
+		const updatedTasks = tasks.map((task) =>
+			task.id === clickedTask.id ? { ...task, showDetails: !task.showDetails } : task
+		);
+		setTasks(updatedTasks);
+	};
 	return (
-		<div>
-			<AddNewTask
-				tasks={tasks}
-				setTasks={setTasks}
-				newTask={newTask}
-				setNewTask={setNewTask}
-				setError={setError}
-			/>
+		<div className='tasks-list'>
 			{tasks.map((task) => {
 				return (
-					<div className='tasksList'>
-						<p>{counter++}. &nbsp;</p> 
-						<Task key={task.id} task={task} setTasks={setTasks} />
-					</div>
+					<button onClick={() => handleClickDetails(task)} key={task.id}>
+						<div>
+							{task.showDetails === true ? <TaskDetails task={task} /> : <Task task={task} />}
+						</div>
+					</button>
 				);
 			})}
 		</div>

@@ -1,11 +1,11 @@
 import MainMenu from './MainMenu';
 
-const Header = ({ setVisible }) => {
+const Header = ({ setAddTaskAndFilterVisibility }) => {
 
 	return (
 		<div className='header'>
 			<h1 className='header-title'>PLANER</h1>
-			<MainMenu setVisible={setVisible} />
+			<MainMenu setAddTaskAndFilterVisibility={setAddTaskAndFilterVisibility} />
 		</div>
 	);
 };
