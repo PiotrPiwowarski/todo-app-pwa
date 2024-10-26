@@ -1,3 +1,5 @@
+/* general */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,44 +11,11 @@ body {
 }
 
 .app {
-    flex-direction: column;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-}
-
-.header {
-    font-size: 1.5rem;
-    color: white;
-    background-color: #6D214F;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
-}
-
-.app-title {
-    line-height: 100px;
-    text-align: center;
-}
-
-.menu-button {
-    
-}
-
-.menu-buttons {
-    position: absolute;
-    top: 100px;
-    left: 0px;;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
-
-.menu-button {
-    position: absolute;
-    height: 50px;
-    color: white;
 }
 
 button {
@@ -65,10 +34,40 @@ button:active {
     color: rgba(0, 0, 0, 0.4);
 }
 
-.error {
-    color: rgba(249, 3, 3, 0.812);
+/* header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #6D214F;
+    width: 100%;
+    height: 100px;
 }
 
-.tasksList {
-    display: flex;
+.header-title {
+    color: white;
 }
+
+/* main menu */
+.main-menu {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu-button {
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: filter 0.3s ease;
+}
+
+.main-menu-button:active img {
+    filter: brightness(0.85);
+}
+

@@ -1,14 +1,11 @@
-import menuButton from '../images/menuButton.svg';
+import MainMenu from './MainMenu';
 
 const Header = ({ setVisible }) => {
-	const handleMenuButton = () => {
-		setVisible((prev) => !prev);
-	};
 
 	return (
 		<div className='header'>
-			<img className='menu-button' src={menuButton} alt='menu button' />
-			<h1 className='app-title'>TODO APP</h1>
+			<h1 className='header-title'>PLANER</h1>
+			<MainMenu setVisible={setVisible} />
 		</div>
 	);
 };
