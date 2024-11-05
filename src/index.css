@@ -98,6 +98,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 .button-active {
@@ -113,5 +114,15 @@ p {
     flex-direction: row;
 }
 
-/* task details */
+/* add task */
+.add-task, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+input {
+    margin: 10px;
+}
 

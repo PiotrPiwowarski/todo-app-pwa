@@ -36,11 +36,15 @@ function App() {
 		filterVisibility: false,
 	});
 
+	const onTaskSubmit =(task) => {
+		setTasks(prev => [...prev, task])
+	}
+
 	return (
 		<div className='app'>
 			<Header setAddTaskAndFilterVisibility={setAddTaskAndFilterVisibility} />
 			<Filter addTaskAndFilterVisibility={addTaskAndFilterVisibility} />
-			<AddTask addTaskAndFilterVisibility={addTaskAndFilterVisibility} />
+			<AddTask addTaskAndFilterVisibility={addTaskAndFilterVisibility} onTaskSubmit={onTaskSubmit} />
 			<AsideMenu />
 			<TasksList tasks={tasks} setTasks={setTasks} />
 		</div>

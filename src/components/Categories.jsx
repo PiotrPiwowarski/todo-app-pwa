@@ -19,7 +19,7 @@ const Categories = () => {
 	return (
 		<div className='aside-menu'>
 			<button onClick={handleClickNew} style={button === 'new' ? {textDecoration: 'underline'} : {}}>NOWE</button>
-			<button onClick={handleClickActive} style={button === 'active' ? {textDecoration: 'underline'} : {}}>AKTYWNE</button>
+			<button onClick={handleClickActive} style={button === 'active' ? {textDecoration: 'underline'} : {}}>W TRAKCIE</button>
 			<button onClick={handleClickFinished} style={button === 'finished' ? {textDecoration: 'underline'} : {}}>ZAKOŃCZONE</button>
 		</div>
 	);

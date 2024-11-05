@@ -4,7 +4,9 @@ import TaskDetails from './TaskDetails';
 const TasksList = ({ tasks, setTasks }) => {
 	const handleClickDetails = (clickedTask) => {
 		const updatedTasks = tasks.map((task) =>
-			task.id === clickedTask.id ? { ...task, showDetails: !task.showDetails } : task
+			task.id === clickedTask.id
+				? { ...task, showDetails: !task.showDetails }
+				: task
 		);
 		setTasks(updatedTasks);
 	};
@@ -12,11 +14,13 @@ const TasksList = ({ tasks, setTasks }) => {
 		<div className='tasks-list'>
 			{tasks.map((task) => {
 				return (
-					<button onClick={() => handleClickDetails(task)} key={task.id}>
-						<div>
-							{task.showDetails === true ? <TaskDetails task={task} /> : <Task task={task} />}
-						</div>
-					</button>
+					<div key={task.id}>
+						{task.showDetails === true ? (
+							<TaskDetails task={task} handleClickDetails={() => handleClickDetails(task)} />
+						) : (
+							<Task task={task} handleClickDetails={() => handleClickDetails(task)} />
+						)}
+					</div>
 				);
 			})}
 		</div>

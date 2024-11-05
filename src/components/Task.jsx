@@ -1,15 +1,14 @@
-const Task = ({ task }) => {
-	const handleTaskDetails = () => {};
+const Task = ({ task , handleClickDetails}) => {
 	return (
 		<div className='task'>
-			<button onClick={handleTaskDetails}>
+			<button onClick={handleClickDetails}>
 				<h3>{task.title}</h3>
 			</button>
 			<p>{task.priority}</p>
 			<p>{task.deadline}</p>
 			<div className='task-buttons'>
 				<button className='button-active'>w trakcie</button>
-				<button className='button-finished'>zrobione</button>
+				<button className='button-finished'>zakończone</button>
 			</div>
 		</div>
 	);

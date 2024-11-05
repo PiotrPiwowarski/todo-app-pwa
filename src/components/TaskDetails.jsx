@@ -1,7 +1,7 @@
-const TaskDetails = ({ task }) => {
+const TaskDetails = ({ task, handleClickDetails }) => {
 	return (
 		<div className='task'>
-			<button>
+			<button onClick={handleClickDetails}>
 				<h3>{task.title}</h3>
 			</button>
 			<p>Opis: {task.description}</p>
