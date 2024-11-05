@@ -31,13 +31,16 @@ function App() {
 		},
 	]);
 
+	const [counter, setCounter] = useState(3);
+
 	const [addTaskAndFilterVisibility, setAddTaskAndFilterVisibility] = useState({
 		addTaskVisibility: false,
 		filterVisibility: false,
 	});
 
 	const onTaskSubmit =(task) => {
-		setTasks(prev => [...prev, task])
+		setTasks(prev => [...prev, {id: counter, ...task, showDetails: false}]);
+		setCounter(prev => prev + 1);
 	}
 
 	return (

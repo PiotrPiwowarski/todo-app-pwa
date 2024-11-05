@@ -42,6 +42,10 @@ p {
     margin: 10px;
 }
 
+input {
+    margin: 10px;
+}
+
 /* header */
 .header {
     display: flex;
@@ -120,9 +124,11 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin: 20px;
 }
 
-input {
-    margin: 10px;
+.add-task-btn {
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
-

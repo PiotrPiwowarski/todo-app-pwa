@@ -58,7 +58,7 @@ const AddTask = ({ addTaskAndFilterVisibility, onTaskSubmit }) => {
                         <input value={description} onChange={(e) => setDescription(e.target.value)} required />
                     </label>
                     <label>
-                        Priorytet:
+                        Priorytet: 
                         <select value={priority} onChange={(e) => setPriority(e.target.value)} required>
                             <option value="">Wybierz priorytet</option>
                             <option value="wysoki">Wysoki</option>
@@ -67,14 +67,10 @@ const AddTask = ({ addTaskAndFilterVisibility, onTaskSubmit }) => {
                         </select>
                     </label>
                     <label>
-                        Lokalizacja:
-                        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
-                    </label>
-                    <label>
                         Termin wykonania:
                         <input type="date" value={deadline} onChange={(e) => setDeadline(e.target.value)} />
                     </label>
-                    <button type="submit">Dodaj zadanie</button>
+                    <button type="submit" className='add-task-btn'>Dodaj zadanie</button>
                 </form>
             </div>
         );
